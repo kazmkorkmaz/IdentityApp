@@ -1,0 +1,22 @@
+﻿@model IEnumerable<WeatherForecast>
+    <h3>Weather Forecast</h3>
+    <hr>
+    <div class="text-center">
+        <table class="table table-hover table-bordered table-striped">
+            <tr>
+                <th>Date</th>
+                <th>Temperature (C)</th>
+                <th>Temperature (F)</th>
+                <th>Summary</th>
+            </tr>
+            @foreach (var forecast in Model)
+            {
+            <tr>
+                <td>@forecast.Date</td>
+                <td>@forecast.TemperatureC</td>
+                <td>@forecast.TemperatureF</td>
+                <td>@forecast.Summary</td>
+            </tr>
+            }
+        </table>
+    </div>
